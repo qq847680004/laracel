@@ -29,6 +29,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 // Home 模块
 Route::group(['namespace' => 'Home', 'prefix' => 'home'], function () {
     Route::group(['prefix' => 'index'], function () {
-       Route::get('index', 'IndexController@index');
+       Route::get('index/{id}', 'IndexController@index');
     });
 });
